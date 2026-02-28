@@ -55,5 +55,11 @@ public class Main {
         }
         scanner.close();
 	}
+	
+	/**
+	 * TO-DO LIST
+	 * 1. Fix the array instantiation
+	 * 2. Fix the printArray method
+	 */
 
 }
