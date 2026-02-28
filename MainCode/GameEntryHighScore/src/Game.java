@@ -2,31 +2,63 @@
  * @author Thabang Mamoloko
  */
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Game functionality
  */
 public class Game {
-	private String name;
-	private int score;
-	private GameEntry[] gameEntry;
+	private List<GameEntry> arrList = new ArrayList<>();
+	
 	/**
-	 * @param name
-	 * @param score
-	 * @param gameEntry
+	 * Constructor
 	 */
-	public Game(String name, int score, GameEntry[] gameEntry) {
-		this.name = name;
-		this.score = score;
-		this.gameEntry = gameEntry;
+	public Game() {}
+	
+	/**
+	 * Method to add elements to the array
+	 * @param obj
+	 * @return new arrList
+	 */
+	public List<GameEntry> addScore(GameEntry obj){
+		this.arrList.add(obj);
+		return arrList;
 	}
 	
-	public GameEntry[] addScore(GameEntry[] arr, String name, int score) {
-		for(int i = 0; i < arr.length; i++) {
-			
-		}
-		return arr;
-		
+	/**
+	 * Getter method for arrList
+	 * @return arrList
+	 */
+	public List<GameEntry> getArrList(){
+		return this.arrList;
 	}
+	
+	/**
+	 * @param arrList the arrList to set
+	 */
+	public void setArrList(List<GameEntry> arrList) {
+		this.arrList = arrList;
+	}
+
+	/**
+	 * Method to remove an element from the list
+	 * @param obj
+	 * @return new arrList
+	 */
+	public List<GameEntry> removeScore(GameEntry obj){
+		this.arrList.remove(obj);
+		return this.arrList;
+	}
+	 /**
+	  * Method to print the list
+	  */
+	public void printArray() {
+		for(int i = 0; i < this.arrList.size(); i++) {
+			System.out.println(arrList.toString());
+		}
+	}
+	 
 	
 
 }
